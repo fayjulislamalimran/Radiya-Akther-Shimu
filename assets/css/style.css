@@ -332,7 +332,7 @@ header .navbar ul li a:hover {
     margin-top: 12rem;
   }
   .home .image img {
-    margin-top: -12rem;
+    margin-top: 5rem;
   }
   .home .content p {
     font-size: 2.2rem;
@@ -603,155 +603,92 @@ header .navbar ul li a:hover {
 .contact {
   background: #e5ecfb;
   min-height: 60vh;
+  padding: 3rem 0;
 }
+
 .contact .container {
   max-width: 1050px;
   width: 100%;
   background: #fff;
   border-radius: 1.5rem;
-  margin: 2rem 5rem;
+  margin: 2rem auto;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
-.contact .container .content {
+
+.contact .content {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
-  padding: 2.5rem 2rem;
+  padding: 2.5rem;
 }
-.contact .content .image-box {
-  max-width: 60%;
-  margin-left: 4rem;
+
+.contact .image-box {
+  flex: 1 1 40%;
+  text-align: center;
 }
-.contact .content .image-box img {
-  width: 100%;
-  height: 40rem;
-  position: relative;
+
+.contact .image-box img {
+  max-width: 100%;
+  height: auto;
 }
-.contact .content form {
-  width: 45%;
-  margin-right: 3.5rem;
-}
-form .form-group {
+
+.contact-container {
+  flex: 1 1 55%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
-.form-group .field {
-  height: 50px;
-  display: flex;
-  position: relative;
-  margin: 1rem;
-  width: 100%;
+
+.contact-left-title h2 {
+  font-size: 2.5rem;
+  color: #333;
 }
-form i {
-  position: absolute;
-  top: 50%;
-  left: 18px;
-  color: rgb(51, 51, 51);
-  font-size: 17px;
-  pointer-events: none;
-  transform: translateY(-50%);
-}
-form .field input,
-form .message textarea {
-  width: 100%;
-  height: 100%;
-  outline: none;
-  padding: 0 16px 0 48px;
-  font-size: 16px;
-  font-family: "Poppins", sans-serif;
-  border-radius: 5px;
-  border: 1px solid rgb(51, 51, 51);
-  background: #e5ecfb;
-}
-.field input::placeholder,
-.message textarea::placeholder {
-  color: rgb(51, 51, 51);
-}
-.field input:focus,
-.message textarea:focus {
-  padding-left: 47px;
-  border: 2px solid rgb(115, 3, 167);
-}
-.field input:focus ~ i,
-.message textarea:focus ~ i {
-  color: rgb(115, 3, 167);
-}
-form .message {
-  position: relative;
-  margin: 1rem;
-  width: 100%;
-}
-form .message i {
-  top: 25px;
-  font-size: 20px;
-  left: 15px;
-}
-form .message textarea {
-  min-height: 130px;
-  max-height: 230px;
-  max-width: 100%;
-  min-width: 100%;
-  padding: 12px 20px 0 48px;
-}
-form .message textarea::-webkit-scrollbar {
-  width: 0px;
-}
-form .button-area {
-  display: flex;
-  float: right;
-  flex-direction: row-reverse;
-}
-.button-area button {
-  color: #fff;
+
+.contact-left hr {
+  width: 100px;
+  height: 4px;
+  background: #007bff;
   border: none;
+  margin-bottom: 2rem;
+}
+
+.contacts-input {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.6rem;
+}
+
+.contacts-input:focus {
+  border-color: #007bff;
   outline: none;
-  font-size: 1.8rem;
+}
+
+button {
+  padding: 1rem 2rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  font-size: 1.6rem;
   cursor: pointer;
   border-radius: 5px;
-  padding: 13px 25px;
-  background: #2506ad;
-  box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
-  transition: 0.3s ease;
-  font-family: "Nunito", sans-serif;
+  transition: background 0.3s ease;
 }
-.button-area button:hover {
-  background: #421cecf5;
+
+button:hover {
+  background: #0056b3;
 }
-.button-area span {
-  font-size: 17px;
-  padding: 1rem;
-  display: none;
+
+.contact-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.button-area button i {
-  position: relative;
-  top: 6px;
-  left: 2px;
-  font-size: 1.5rem;
-  transition: 0.3s;
-  color: #fff;
-}
-.button-area button:hover i {
-  left: 8px;
-}
-/* contact section media queries starts */
-@media (max-width: 900px) {
-  .contact {
-    min-height: 70vh;
-  }
-  .contact .container {
-    margin: 3rem 0 2rem 0;
-  }
-  .contact .container .content {
-    padding: 18px 12px;
-  }
-  .contact .content .image-box {
-    display: none;
-  }
-  .contact .content form {
-    width: 100%;
-    margin-right: 2rem;
-  }
+
+.contact-right img {
+  max-width: 80%;
+  border-radius: 10px;
 }
 /* contact section media queries ends */
 /* contact section ends */
